@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="description"
+        content="HyperNeRF handles topological variations by modeling a family of shapes in a higher-dimensional space, thereby producing more realistic renderings and more accurate geometric reconstructions.">
+  <meta name="keywords" content="HyperNeRF, Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta property="og:image" content="./static/images/thumbnail.png"/>
+  <link rel="image_src" href="./static/images/thumbnail.png"> -->
+  <!-- <link rel="icon"
+        type="image/x-icon"
+        href="./static/images/favicon.png"/> -->
+  <link rel="icon" type="image/x-icon" href="assets/videogui.png">
+
+
+  <title>VideoGUI</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EDF010G6PN');
+
+
+  </script>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #209CEE;
+      position: fixed;
+      width: 100%;
+      transition: background-color 0.5s ease;
+      /* 为背景颜色改变添加过渡效果 */
+    }
+
+    .navbar.scrolled {
+      background-color: #209CEE;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: color 0.5s ease;
+      /* 为文本颜色改变添加过渡效果 */
+    }
+
+    .navbar.scrolled li a {
+      color: white;
+    }
+
+    /* .navbar li a:hover {
+      background-color: #111;
+    } */
+  </style>
+
+  <script>
+    window.onscroll = function () {
+      var navbar = document.getElementById('navbar');
+      if (window.pageYOffset > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <ul class="navbar" id="navbar">
+    <li>
+      <a href="#home">
+        <!-- <img src="assets/videogui.png" alt="Home" style="height:30px; width:30px; vertical-align:middle; margin-right:5px;"> -->
+        <strong>OMG workshop @ NUS</strong> </a>
+    </li>
+  </ul>
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div> -->
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div> -->
+  </nav>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+        </div>
+        <div class="container has-text-centered">
+          <h1 class="title is-2 publication-title">
+            <br>
+          Open Multimodal Gathering Workshop
+          </h1>
+        </div>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <br>
+          <div class="content has-text-centered">
+            <p>
+            <strong>Date</strong>: Sunday, April 27, 2025 | 🕐 1:00 PM – 6:00 PM
+            <br>
+            <strong>Location</strong>: LT16, COM3, National University of Singapore (NUS)
+          </p>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <CENter>
+    <img src="./assets/nus.jpg" alt="Tencent" style="max-width: 800px; max-height: 800px;">"
+  </CENter>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Introduction</h2>
+          <div class="content has-text-justified">
+            <p>
+              Thank you for your interest in the <strong>Open Multimodal Gathering workshop</strong>! This event, hosted by Show Lab at the National University of Singapore (NUS), will take place during the <strong>ICLR 2025</strong>, providing an excellent opportunity for ICLR attendees to join us.
+              <br><br>
+              This event brings together researchers, students, and practitioners to explore cutting-edge topics in <strong>vision-language, video understanding, intelligent agents, and embodied AI</strong>.
+              <br><br>            
+              The workshop will feature talks by confirmed speakers, with opportunities for additional attendees to present. <strong>A campus tour</strong> will follow the presentations, offering a chance to experience the NUS research environment firsthand.
+              <br><br>
+              Whether you’d like to attend as <strong>an audience</strong> member or present your work as <strong>a speaker</strong>, we warmly welcome you to join this exciting gathering and connect with the broader multimodal research community! 
+            </p>
+          </div>
+        </div>
+      </div>    
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <h2 class="title is-3">Schedule</h2>
+      </div>
+      
+      <CENter>
+        <img src="./assets/schedule.png" alt="Schedule" style="max-width: 1200px; max-height: 1200px;">
+      </CENter>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Organizers Section -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Organizers</h2>
+            <div class="columns is-centered">
+              <div class="column is-centered">
+                <a href="https://sites.google.com/view/showlab" target="_blank">
+                  <figure class="image is-flex is-justify-content-center is-align-items-center">
+                    <img src="assets/showlab.png" alt="Show Lab" style="max-width: 150px; max-height: 150px;">
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Sponsor Section -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Sponsor</h2>
+            <div class="columns is-centered">
+              <div class="column is-centered">
+                <a href="https://mp.weixin.qq.com/s/PV7Ogrjn5rizBLpj6tU9kA" target="_blank">
+                  <figure class="image is-flex is-justify-content-center is-align-items-center">
+                    <img src="assets/tencent.jpg" alt="Tencent" style="max-width: 200px; max-height: 200px;">
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+
+</html>
