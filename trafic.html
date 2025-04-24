@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="description"
+        content="HyperNeRF handles topological variations by modeling a family of shapes in a higher-dimensional space, thereby producing more realistic renderings and more accurate geometric reconstructions.">
+  <meta name="keywords" content="HyperNeRF, Nerfies, D-NeRF, NeRF"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta property="og:image" content="./static/images/thumbnail.png"/>
+  <link rel="image_src" href="./static/images/thumbnail.png"> -->
+  <!-- <link rel="icon"
+        type="image/x-icon"
+        href="./static/images/favicon.png"/> -->
+
+
+  <title>Open Multimodal Gathering</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDF010G6PN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-EDF010G6PN');
+
+
+  </script>
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./static/slick/slick-theme.css" />
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #209CEE;
+      position: fixed;
+      width: 100%;
+      transition: background-color 0.5s ease;
+      /* 为背景颜色改变添加过渡效果 */
+    }
+
+    .navbar.scrolled {
+      background-color: #209CEE;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: color 0.5s ease;
+      /* 为文本颜色改变添加过渡效果 */
+    }
+
+    .navbar.scrolled li a {
+      color: white;
+    }
+
+    /* .navbar li a:hover {
+      background-color: #111;
+    } */
+  </style>
+
+  <script>
+    window.onscroll = function () {
+      var navbar = document.getElementById('navbar');
+      if (window.pageYOffset > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <ul class="navbar" id="navbar">
+    <li>
+      <a href="#home">
+        <strong>OMG workshop @ NUS</strong> </a>
+    </li>
+  </ul>
+      
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Organizers Section -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full">
+              <h2 class="title is-3">Traffic</h2>
+      
+              <!-- First Image Larger with Text on the Right -->
+              <div class="columns is-vcentered">
+                <div class="column is-7">
+                  <figure class="image">
+                    <img src="assets/map_1.png" alt="Traffic Image Before" style="width: 100%; height: auto;">
+                  </figure>
+                </div>
+                <div class="column is-5 has-text-left">
+                  <p class="subtitle is-6">Overview</p>
+                  <p class="subtitle is-6">1. Walk from Kent Ridge MRT to Opp Kent Ridge Stn Exit A (School Bus Stop).</p>
+                  <p class="subtitle is-6">2. Take school bus <strong>D2</strong> to COM3.</p>
+                  <p class="subtitle is-6">3. Walk from COM3 to LT16 (according to the following guidance).</p>
+                </div>
+              </div>
+      
+              <!-- Second Image Centered -->
+              <div class="columns is-centered">
+                <div class="column is-full has-text-centered">
+                  <figure class="image">
+                    <img src="assets/map_2.png" alt="Traffic Image After" style="width: 85%; height: auto;">
+                  </figure>
+                  <p class="subtitle is-6">The Guidance for walking from COM3 to LT16.</p>
+                </div>
+              </div>
+      
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      
+      
+
+
+      <section class="section">
+        <div class="container is-max-desktop">
+          <!-- Organizers Section -->
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-full">
+              <h2 class="title is-3">Wechat group</h2>
+              <div class="columns is-centered">
+                <div class="column is-centered">
+                    <figure class="image is-flex is-justify-content-center is-align-items-center">
+                      <img src="assets/qrcode.jpg" alt="QRcode" style="max-width: 150px;">
+                    </figure>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Organizers Section -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Organizers</h2>
+            <div class="columns is-centered">
+              <div class="column is-centered">
+                <a href="https://sites.google.com/view/showlab" target="_blank">
+                  <figure class="image is-flex is-justify-content-center is-align-items-center">
+                    <img src="assets/showlab.png" alt="Show Lab" style="max-width: 150px; max-height: 150px;">
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Sponsor Section -->
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Sponsor</h2>
+            <div class="columns is-centered">
+              <div class="column is-centered">
+                <a href="https://mp.weixin.qq.com/s/PV7Ogrjn5rizBLpj6tU9kA" target="_blank">
+                  <figure class="image is-flex is-justify-content-center is-align-items-center">
+                    <img src="assets/tencent.png" alt="Tencent" style="max-width: 200px; max-height: 200px;">
+                  </figure>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>    
+
+    <script type="text/javascript" src="./static/slick/slick.min.js"></script>
+</body>
+
+</html>
